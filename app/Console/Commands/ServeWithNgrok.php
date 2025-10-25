@@ -54,7 +54,7 @@ class ServeWithNgrok extends Command
         $ngrokProcess = new Process(['php', 'artisan', 'ngrok', '--port=' . $port]);
         $ngrokProcess->start();
 
-        sleep(1);
+        sleep(2);
 
         $webService = app(NgrokWebService::class);
 
